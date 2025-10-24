@@ -12,6 +12,17 @@ class ConsoleView {
         return Number(input);
     }
 
+    printStart() {
+        Console.print(MESSAGES.START);
+    }
+
+    printRound(cars) {
+        Object.entries(cars).forEach(([name, distance]) => {
+            Console.print(`${name} : ${"-".repeat(distance)}`);
+        });
+        Console.print(" ");
+    }
+
     printError(error) {
         Console.print(`${error.message}`);
     }
