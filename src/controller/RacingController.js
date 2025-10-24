@@ -10,8 +10,12 @@ class RacingController {
         try {
             const carNames = await this.view.getCarNames();
             Validator.validateCarNames(carNames);
-        } catch (error) {
+
+            const tryCount = await this.view.getTryCount();
+            Validator.validateTryCount(tryCount);
             
+        } catch (error) {
+            this.view.printError(error);
         }
     }
 }
