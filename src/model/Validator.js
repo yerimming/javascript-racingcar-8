@@ -42,4 +42,12 @@ class Validator {
         });
     }
 
+    // 시도 횟수가 숫자인지, 한 번 이상인지 확인
+    validateTryCount(count) {
+        if(isNaN(count) || count < 1) {
+            throw new Error(`${ERROR_MESSAGES.PREFIX} ${ERROR_MESSAGES.TRY_COUNT}`);
+        }
+    }
 }
+
+export default Validator;
