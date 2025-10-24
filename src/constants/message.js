@@ -11,4 +11,5 @@ export const ERROR_MESSAGES = {
     NAME_LENGTH: "자동차 이름은 5자 이하만 가능합니다.",
     TRY_COUNT: "시도 횟수는 1 이상의 숫자여야 합니다.",
     INPUT: "입력 오류가 발생했습니다.",
+    MIN_CARS: "최소 2대 이상의 자동차가 필요합니다.",
 }
