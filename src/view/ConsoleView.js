@@ -17,4 +17,4 @@ class ConsoleView {
     }
 }
 
-export default RacingController;
+export default ConsoleView;
