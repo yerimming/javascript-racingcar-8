@@ -1,5 +1,5 @@
 import { MissionUtils } from "@woowacourse/mission-utils";
-import { MOVE_THOUSHOLD } from "../constants/gameNumbers";
+import { MOVE_THOUSHOLD } from "../constants/gameNumbers.js";
 
 class CarRace {
     constructor() {
@@ -24,6 +24,11 @@ class CarRace {
 
     getCars() {
         return this.cars;
+    }
+
+    getWinners() {
+        const max = Math.max(...Object.values(this.cars));
+        return Object.keys(this.cars).filter(name => this.cars[name] === max);
     }
 }
 
