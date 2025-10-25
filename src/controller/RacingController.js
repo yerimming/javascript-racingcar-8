@@ -28,8 +28,9 @@ class RacingController {
             this.view.printWinners(winners);
         } catch (error) {
             this.view.printError(error);
+            throw error;
         }
     }
 }
-
+a
 export default RacingController;
