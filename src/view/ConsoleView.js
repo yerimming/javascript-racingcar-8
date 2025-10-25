@@ -1,5 +1,5 @@
 import { Console } from "@woowacourse/mission-utils";
-import { MESSAGES } from "../constants/message";
+import { MESSAGES } from "../constants/message.js";
 
 class ConsoleView {
     async getCarNames() {
@@ -21,6 +21,14 @@ class ConsoleView {
             Console.print(`${name} : ${"-".repeat(distance)}`);
         });
         Console.print(" ");
+    }
+
+    printWinners(winners) {
+        if(winners.length === 0) {
+            Console.print(MESSAGES.NO_WINNER);
+            throw new Error("[ERROR] 우승자가 없습니다.");
+        }
+        Console.print(`${MESSAGES.WINNER}${winners.join(", ")}`);
     }
 
     printError(error) {
