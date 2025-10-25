@@ -1,5 +1,5 @@
-import { MIN_CAR_NUM, MAX_CAR_NAME_LENGTH } from "../constants/gameNumbers";
-import { ERROR_MESSAGES } from "../constants/message";
+import { MIN_CAR_NUM, MAX_CAR_NAME_LENGTH } from "../constants/gameNumbers.js";
+import { ERROR_MESSAGES } from "../constants/message.js";
 
 class Validator {
     // 자동차 이름 전체 검증
@@ -43,7 +43,7 @@ class Validator {
     }
 
     // 시도 횟수가 숫자인지, 한 번 이상인지 확인
-    validateTryCount(count) {
+    static validateTryCount(count) {
         if(isNaN(count) || count < 1) {
             throw new Error(`${ERROR_MESSAGES.PREFIX} ${ERROR_MESSAGES.TRY_COUNT}`);
         }
