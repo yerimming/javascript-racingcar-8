@@ -23,6 +23,9 @@ class RacingController {
                 this.race.playRound();
                 this.view.printRound(this.race.getCars());
             }
+
+            const winners = this.race.getWinners();
+            this.view.printWinners(winners);
         } catch (error) {
             this.view.printError(error);
         }
