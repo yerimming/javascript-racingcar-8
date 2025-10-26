@@ -32,5 +32,5 @@ class RacingController {
         }
     }
 }
-a
+
 export default RacingController;
